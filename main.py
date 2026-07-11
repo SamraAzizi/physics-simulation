@@ -94,3 +94,47 @@ def run(window, width, height):
 
 	space = pymunk.Space()
 	space.gravity = (0, 981)
+
+	create_boundaries(space, width, height)
+	create_structure(space, width, height)
+	create_swinging_ball(space)
+
+	draw_options = pymunk.pygame_util.DrawOptions(window)
+
+	pressed_pos = None
+	ball = None
+
+	while run:
+		line = None
+		if ball and pressed_pos:
+			line = [pressed_pos, pygame.mouse.get_pos()]
+
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
+				run = False
+				break
+
+			if event.type == pygame.MOUSEBUTTONDOWN:
+				if not ball:
+					pressed_pos = pygame.mouse.get_pos()
+					ball = create_ball(space, 30, 10, pressed_pos)
+				elif pressed_pos:
+					ball.body.body_type = pymunk.Body.DYNAMIC
+					angle = calculate_angle(*line)
+					force = calculate_distance(*line) * 50
+					fx = math.cos(angle) * force
+					fy = math.sin(angle) * force
+					ball.body.apply_impulse_at_local_point((fx, fy), (0, 0))
+					pressed_pos = None
+				else:
+					space.remove(ball, ball.body)
+					ball = None
+
+		draw(space, window, draw_options, line)
+		space.step(dt)
+		clock.tick(fps)
+
+	pygame.quit()
+
+if __name__ == "__main__":
+	run(window, WIDTH, HEIGHT)
