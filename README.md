@@ -1,15 +1,10 @@
-# 🎯 Physics Ball Launcher
+#  Physics Ball Launcher
 
 A physics-based ball launching game built with Python, Pygame, and Pymunk. Click to create a ball, drag to aim, and release to launch it at structures — similar to Angry Birds mechanics!
 
-![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
-![Pygame](https://img.shields.io/badge/Pygame-2.0+-green.svg)
-![Pymunk](https://img.shields.io/badge/Pymunk-6.0+-red.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-
 ---
 
-## 🎮 Gameplay
+##  Gameplay
 
 - **Click** anywhere to create a red ball
 - **Drag** the mouse to set the launch angle and power (longer drag = more force)
@@ -19,18 +14,18 @@ A physics-based ball launching game built with Python, Pygame, and Pymunk. Click
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🧲 **Realistic Physics** — Gravity, collisions, friction, and elasticity simulated using Pymunk
-- 🎯 **Aiming System** — Visual aiming line with force proportional to drag distance
-- 🏗️ **Destructible Structures** — Wooden pillars and beams with mass and physics properties
-- ⚡ **Swinging Obstacle** — A wrecking ball on a rope that adds challenge
-- 🖱️ **Intuitive Controls** — Simple mouse-based interaction
-- 🎨 **Clean Visuals** — Minimalist design with clear physics visualization
+-  **Realistic Physics** — Gravity, collisions, friction, and elasticity simulated using Pymunk
+-  **Aiming System** — Visual aiming line with force proportional to drag distance
+-  **Destructible Structures** — Wooden pillars and beams with mass and physics properties
+-  **Swinging Obstacle** — A wrecking ball on a rope that adds challenge
+-  **Intuitive Controls** — Simple mouse-based interaction
+-  **Clean Visuals** — Minimalist design with clear physics visualization
 
 ---
 
-## 📋 Requirements
+##  Requirements
 
 - **Python 3.7 or higher**
 - **Pygame 2.0+** — For graphics and event handling
@@ -38,11 +33,11 @@ A physics-based ball launching game built with Python, Pygame, and Pymunk. Click
 
 ---
 
-## 🛠️ Installation
+##  Installation
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/physics-ball-launcher.git
+git clone https://github.com/SamraAzizi/physics-simulation.git
 cd physics-ball-launcher
 ```
 ### step 2: Create a Virtual Environment (Recommended)
